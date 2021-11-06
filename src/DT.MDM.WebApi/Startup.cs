@@ -34,15 +34,15 @@ namespace DT.MDM.WebApp
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "DT.MDM.WebApp", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "DT.MDM.WebApi", Version = "v1" });
             });
 
             services.AddDbContext<MDMContext>(options => 
-                options.UseSqlServer(Configuration.GetConnectionString("MDMContext"), b => b.MigrationsAssembly("DT.MDM.Migrations")));
+                options.UseSqlServer(Configuration.GetConnectionString("MDMContext"), b => b.MigrationsAssembly("DT.MDM.DAL")));
 
-            services.AddScoped<ResourceRepository>();
+            services.AddScoped<FieldRepository>();
 
-            services.AddScoped<ResourceService>();
+            services.AddScoped<FieldService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

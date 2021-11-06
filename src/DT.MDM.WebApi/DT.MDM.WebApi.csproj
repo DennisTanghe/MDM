@@ -17,7 +17,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DT.MDM.DAL\DT.MDM.DAL.csproj" />
-    <ProjectReference Include="..\DT.MDM.Migrations\DT.MDM.Migrations.csproj" />
     <ProjectReference Include="..\DT.MDM.Models\DT.MDM.Models.csproj" />
     <ProjectReference Include="..\DT.MDM.Services\DT.MDM.Services.csproj" />
   </ItemGroup>
